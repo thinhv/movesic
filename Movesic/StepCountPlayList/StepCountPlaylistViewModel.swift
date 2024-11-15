@@ -17,7 +17,9 @@ final class StepCountPlaylistViewModel {
 
     private(set) var state: State = .loading
 
+    @ObservationIgnored
     private let stepProvider: StepCountProviding
+    @ObservationIgnored
     private let stepCountPlaylistMapper: StepCountPlaylistMapper
 
     init(
@@ -57,7 +59,7 @@ final class StepCountPlaylistViewModel {
             return
         }
 
-        let stepCount = try await stepProvider.stepCount(from: Date(), to: Date())
+        let stepCount = try await stepProvider.stepCount(from: startDate, to: endDate)
         let playlist = stepCountPlaylistMapper.map(stepCount)
         state = .loaded(playlist)
     }
