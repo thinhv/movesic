@@ -1,6 +1,6 @@
 # Movesic
 
-Movesic is a very SwiftUI iOS app that uses HealthKit to retrieve step count data and suggests a music playlist based on the user's recent activity levels.
+Movesic is a very simple SwiftUI iOS app that uses HealthKit to retrieve step count data and suggests a music playlist based on the user's recent activity levels.
 
 ---
 
@@ -17,14 +17,11 @@ Movesic is a very SwiftUI iOS app that uses HealthKit to retrieve step count dat
   - Not Determined: Prompts the user for HealthKit access.
 - **Testable Code**: Code is tested with unit tests.
 
----
-
 ## Tools and frameworks used
 
 - **Swift**: Written in Swift with modern Swift Concurrency usage.
 - **SwiftUI** and **Observation Framework**: Used @Observable macro.
 - **HealthKit**: For retrieving step count data.
----
 
 ## Installation
 
