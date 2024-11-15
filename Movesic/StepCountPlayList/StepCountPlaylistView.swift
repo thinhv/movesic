@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct StepCountPlaylistView: View {
-    @State var viewModel = StepCountPlaylistViewModel(stepProvider: StepCountProvider())
-    
+    @Environment(StepCountPlaylistViewModel.self) var viewModel
+
     var body: some View {
         VStack {
             Group {

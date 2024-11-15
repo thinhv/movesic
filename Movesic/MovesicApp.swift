@@ -12,6 +12,7 @@ struct MovesicApp: App {
     var body: some Scene {
         WindowGroup {
             StepCountPlaylistView()
+                .environment(StepCountPlaylistViewModel(stepProvider: StepCountProvider()))
         }
     }
 }
